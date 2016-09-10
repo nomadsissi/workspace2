@@ -1,0 +1,15 @@
+  <h1>電脳工場MF R2.0</h1>
+
+<h2>投稿の一覧</h2>
+<ul class="notes">
+  <% @notes.each do |note| %>
+    <% if note.category == "2" %>
+      <li>
+        <p>タイトル</p>
+        <span class="content">
+          <%= link_to note.title, note_path(note.id) %>
+        </span>
+      </li>
+    <%end%>
+  <%end%>
+</ul>

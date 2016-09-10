@@ -1,0 +1,13 @@
+<h1>新規投稿する</h1>
+<%= form_tag notes_path do %>
+カテゴリー
+<select name="category" class="form-control styled-select">
+    <option value="3">R3.0</option>
+    <option value="2">R2.0</option>
+</select>
+タイトル
+<input type="text" name="title" class="form-control title-field">
+内容
+<textarea name="content" class="form-control content-field"></textarea>
+<input type="submit" value="投稿する" class="btn primary-btn">
+<% end %>
