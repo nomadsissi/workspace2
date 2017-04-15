@@ -1,13 +1,10 @@
 <h1>新規投稿する</h1>
 <%= form_tag notes_path do %>
-カテゴリー
-<select name="category" class="form-control styled-select">
-    <option value="3">R3.0</option>
-    <option value="2">R2.0</option>
-</select>
 タイトル
 <input type="text" name="title" class="form-control title-field">
 内容
-<textarea name="content" class="form-control content-field"></textarea>
+<textarea name="content" class="form-control content-field" cols="30" rows="5" wrap="hard"></textarea>
+タグ（スペースの無いフレーズの前にハッシュ記号（#）を付けて、タグの間でスペースで連結してください）
+<input type="text" name="category" placeholder="#例1 #例2" class="form-control title-field">
 <input type="submit" value="投稿する" class="btn primary-btn">
 <% end %>

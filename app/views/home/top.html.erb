@@ -1,2 +1,36 @@
-  <h1>ようこそ電脳工場ー開発資料集へ！</h1>
-
+<div class="uk-grid">
+    <div class="uk-width-9-10">
+    <h1>電脳工場MF </h1>
+    <h2>投稿の一覧</h2>
+    <ul class="notes">
+    <div class="uk-grid uk-grid-width-1-2">
+      <% @notes.each do |note| %>
+        <li>
+          <p> <%= note.title %></p>
+          <span class="content">
+            <%= link_to note.content[0, 30], note_path(note.id) %>
+          </span>
+          <p>
+            <% note.tabs.each do |tab| %>
+              <%= render_with_hashtags(tab) %>
+            <%end%>
+          </p>
+        </li>
+      <%end%>
+    </div>
+    </ul>
+</div>  
+<div class="uk-width-1-10">
+    <!-- This is a button toggling the off-canvas sidebar -->
+    <button class="uk-button" data-uk-offcanvas="{target:'#my-id'}">
+        <i class="uk-icon-angle-double-right uk-icon-large"></i>
+    </button>
+    <!-- This is the off-canvas sidebar -->
+    <div id="my-id" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+    <!--<div class="uk-grid uk-container-center">-->
+    <%= render :template => 'tabs/search' %> 
+    </div>
+    </div>
+</div>
+</div>

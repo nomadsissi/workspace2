@@ -2,5 +2,6 @@
 <%= form_tag update_note_path(@note.id),method:'patch' do %>
   <%= text_field_tag :title , @note.title, class: "form-control title-field"%>
   <%= text_area_tag :content, @note.content, class: "form-control content-content-field" %>
+  <%= text_field_tag :category , @note.category, class: "form-control title-field" ,:placeholder => "#例1 #例2"%>
   <%= submit_tag "保存", class: "btn primary-btn"%>
 <% end %>

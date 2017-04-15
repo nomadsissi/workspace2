@@ -1,0 +1,20 @@
+  <h1>電脳工場MF </h1>
+
+<h2>投稿の一覧</h2>
+<ul class="notes">
+  <div class="uk-grid uk-grid-width-1-2">
+    <% @notes.each do |note| %>
+      <li>
+        <p> <%= note.title %></p>
+        <span class="content">
+          <%= link_to note.content[0, 30], note_path(note.id) %>
+        </span>
+        <p>
+          <% note.tabs.each do |tab| %>
+            <%= render_with_hashtags(tab) %>
+          <%end%>
+        </p>
+      </li>
+    <%end%>
+   </div>
+</ul>

@@ -37,6 +37,7 @@ h1 {
   font-size: 32px;
   letter-spacing: -2px;
   margin-bottom: 30px;
+  padding-top: 20px;
 }
 
 h2 {
@@ -51,9 +52,6 @@ p {
 
 /* ヘッダー ================================ */
 .navbar {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(34, 49, 52, 0.9);
   top: 0;
   right: 0;
   left: 0;
@@ -61,32 +59,34 @@ p {
   margin-bottom: 20px;
 }
 
-#logo {
-  float: left;
-  font-size: 27px;
-  color: #fff;
-  padding-top: 12px;
-  letter-spacing: -1px;
-  font-weight: bold;
-}
+// #logo {
+//   float: left;
+//   font-size: 27px;
+//   color: #fff;
+//   padding-top: 20px;
+//   letter-spacing: -1px;
+//   font-weight: bold;
 
-.header-right {
-  float: right;
-  margin: 0 auto;
-}
+// }
 
-.header-right a {
-  color: white;
-  display: block;
-  text-decoration: none;
-}
+// .header-right {
+//   float: right;
+//   margin: 0 auto;
+// }
 
-.header-right li {
-  line-height: 65px;
-  padding: 0 18px;
-  float: left;
-  color: white;
-}
+// .header-right a {
+//   color: white;
+//   display: block;
+//   text-decoration: none;
+// }
+
+// .header-right li {
+//   line-height: 65px;
+//   padding: 0 18px;
+//   float: left;
+//   color: white;
+// }
+
 
 /* フッター ================================ */
 footer {

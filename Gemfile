@@ -44,6 +44,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'hirb', '0.7.3'
-  gem ‘json’, '1.8.3'
+  gem 'uikit-sass-rails', git: 'https://github.com/8398a7/uikit-sass-rails'
 end
 

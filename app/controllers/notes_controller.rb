@@ -19,16 +19,19 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
     @note.title = params[:title]
     @note.content = params[:content]
+    @note.category = params[:category]
     @note.save
     redirect_to note_path(@note.id)
   end
+  
   def destroy
     @note = Note.find(params[:id])
     @note.destroy
-    if @note.category == "3" then
-      redirect_to r3_path
-    else
-      redirect_to r2_path
-    end
+    redirect_to root_path
+  end
+  
+  def hashtags
+    tab = Tab.find_by(id: params[:id])
+    @notes = tab.notes
   end
 end

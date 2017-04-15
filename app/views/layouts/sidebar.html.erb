@@ -1,0 +1,9 @@
+<%= content_for(:sidebar)  do %>
+    <% @tabs.each do |tab| %>
+            <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+              <div class="uk-text-large uk-width-1-1">
+                <%=link_to tab.name ,"/notes/hashtag/#{tab.id}", { :class => "uk-button uk-width-1-1 uk-margin-mini-button" } %>
+              </div>
+            </ul>
+    <%end%>
+<% end %>

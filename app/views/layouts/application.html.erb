@@ -6,20 +6,20 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
- <header class="navbar">
-  <div class="container">
-    <div id="logo">Factory-ONE</div>
-    <ul class="header-right">
-      <li><%= link_to "Top", root_path %></li>
-      <li><%= link_to "R2.0", r2_path %></li>
-      <li><%= link_to "R3.0", r3_path %></li>
-      <li><%= link_to "New", notes_new_path %></li>
-    </ul>
-  </div>
+<header class="navbar">
+  <nav class="uk-navbar">
+    <div class="uk-navbar-content">
+      <ul class="uk-navbar-nav">
+          <li><%= link_to "開発資料集", root_path %></li>
+          <li><%= link_to "New", notes_new_path %></li>
+      </ul>
+    </div>
+    
+  </nav>
 </header>
 <body>
 <div class="container">
-<%= yield %>
+<%= yield %> 
 </div>
  <div class="container">
   <footer class="footer">
